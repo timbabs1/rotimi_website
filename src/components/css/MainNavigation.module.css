@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 32px auto;
+  padding: 0 32px;
+  height: 96px;
+}
+
+.logo {
+  height: 120px;
+}
+
+.heading {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 28px;
+}
+
+.header ul {
+  display: flex;
+}
+
+.header a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header li {
+  display: flex;
+  cursor: pointer;
+  margin-left: 12px;
+  font-size: 30px;
+}
+
+.header li:first-child {
+  margin-left: 0px;
+}

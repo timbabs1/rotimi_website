@@ -1,0 +1,15 @@
+.section {
+  width: auto;
+  padding: 76px 0px;
+  text-align: center;
+}
+
+.header {
+  font-size: 48px;
+  margin-bottom: 64px;
+}
+
+.arrow {
+  font-size: 30px;
+  margin-bottom: 24px;
+}

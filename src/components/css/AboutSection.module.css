@@ -1,0 +1,19 @@
+.section {
+  height: auto;
+  width: auto;
+  /* background-color: #eee; */
+  padding: 76px 0px;
+}
+
+.header {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 64px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 362.66px);
+  grid-template-rows: repeat(2, auto);
+  gap: 24px;
+}
