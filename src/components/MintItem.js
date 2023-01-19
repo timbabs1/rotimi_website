@@ -237,9 +237,7 @@ function MintItem({ item }) {
                             {(isPrepareError || contractWriteIsError || showMintErrorMessage) && (
                                 <>
                                     {(contractWriteError || mintErrorMessage || prepareError) && (
-                                        <div>
-                                            Error: {(prepareError || contractWriteError)?.message || mintErrorMessage} minting disabled
-                                        </div>
+                                        <div>Error: {(prepareError || contractWriteError)?.message || mintErrorMessage}</div>
                                     )}
                                     {prepareError?.reason.includes('insufficient funds') && (
                                         <div>Error: {prepareError?.reason} minting disabled</div>
