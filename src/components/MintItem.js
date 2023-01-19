@@ -92,6 +92,15 @@ function MintItem({ item }) {
         }
     }, [balance])
 
+    useEffect(() => {
+        if (prepareError) {
+            console.log('prepareError', prepareError)
+        }
+        if (contractWriteError) {
+            console.log('contractWriteError', contractWriteError)
+        }
+    }, [prepareError, contractWriteError])
+
     function quantityChangeHandler(event) {
         setEnteredQuantity(event.target.value)
     }
@@ -227,8 +236,10 @@ function MintItem({ item }) {
                             )}
                             {(isPrepareError || contractWriteIsError || showMintErrorMessage) && (
                                 <>
-                                    {(contractWriteError || mintErrorMessage) && (
-                                        <div>Error: {contractWriteError?.message || mintErrorMessage} minting disabled</div>
+                                    {(contractWriteError || mintErrorMessage || prepareError) && (
+                                        <div>
+                                            Error: {(prepareError || contractWriteError)?.message || mintErrorMessage} minting disabled
+                                        </div>
                                     )}
                                     {prepareError?.reason.includes('insufficient funds') && (
                                         <div>Error: {prepareError?.reason} minting disabled</div>
