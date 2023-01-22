@@ -9,6 +9,12 @@
   object-fit: cover;
 }
 
+.blackSheepImage {
+  object-position: 40% 10%;
+  width: 362.66px;
+  object-fit: cover;
+}
+
 .name {
   font-size: 26px;
 }
@@ -21,6 +27,12 @@
 
 .content {
   padding: 24px;
+  overflow-x: auto;
+}
+
+.contentBarnabas {
+  padding: 24px;
+  overflow-y: scroll;
 }
 
 .socialContainer {

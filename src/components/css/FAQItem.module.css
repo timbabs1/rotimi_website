@@ -6,16 +6,19 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  transition: all 1s ease-in;
 }
 
 .question {
   margin-left: 12px;
   font-size: 24px;
   font-weight: 600;
+  transition: all 1s ease-in;
 }
 
 .chevron {
   font-size: 30px;
+  transition: all 1s ease-in;
 }
 
 .itemActive {
@@ -23,6 +26,7 @@
   align-items: center;
   cursor: pointer;
   margin-bottom: 12px;
+  transition: all 1s ease-in;
 }
 
 .answer {
@@ -31,4 +35,5 @@
   font-size: 18px;
   line-height: 1.4;
   cursor: default;
+  transition: all 1s ease-in;
 }
