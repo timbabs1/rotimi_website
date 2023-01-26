@@ -1,11 +1,23 @@
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  /*max-width: 1200px;*/
-  margin: 32px auto;
-  padding: 0 32px;
-  height: 96px;
+/*.header {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: space-between;*/
+/*  !*max-width: 1200px;*!*/
+/*  margin: 32px auto;*/
+/*  padding: 0 32px;*/
+/*  height: 96px;*/
+/*}*/
+
+@media only screen and (min-width: 1200px) {
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /*max-width: 1200px;*/
+        margin: 32px auto;
+        padding: 0 32px;
+        height: 96px;
+    }
 }
 
 /*.header > img {*/
@@ -13,34 +25,76 @@
 /*}*/
 
 .logo {
-  height: 120px;
+    height: 120px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .logo {
+        text-align: center;
+    }
+    .socialConnectStyle {
+        flex-direction: row;
+        display: flex;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .socialConnectStyle {
+        flex-direction: row;
+        display: flex;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .socialConnectStyle {
+        flex-direction: row;
+        display: flex;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .socialConnectStyle {
+        flex-direction: row;
+        display: flex;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .logo {
+        height: 120px;
+    }
 }
 
 .heading {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0);
-  font-size: 28px;
+    /*position: absolute;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%, 0);*/
+    font-size: 28px;
 }
 
 .header ul {
-  display: flex;
+    display: flex;
 }
 
 .header a {
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .header li {
-  display: flex;
-  cursor: pointer;
-  margin-left: 12px;
-  font-size: 30px;
+    display: flex;
+    cursor: pointer;
+    margin-left: 12px;
+    font-size: 30px;
 }
 
 .header li:first-child {
-  margin-left: 0px;
+    margin-left: 0px;
 }

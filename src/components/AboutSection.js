@@ -1,5 +1,6 @@
 import classes from './css/AboutSection.module.css'
 import AboutItem from './AboutItem'
+import { Row, Col } from 'reactstrap'
 
 const burnout = [
     {
@@ -49,9 +50,13 @@ function AboutSection() {
             <div className={classes.section}>
                 <h2 className={classes.header}>The Burnouts</h2>
                 <ul className={classes.grid}>
-                    {burnout.map(item => (
-                        <AboutItem item={item} />
-                    ))}
+                    <Row>
+                        {burnout.map(item => (
+                            <Col sm="12" md="4" className="mt-3 mb-3">
+                                <AboutItem item={item} />
+                            </Col>
+                        ))}
+                    </Row>
                 </ul>
             </div>
         </div>

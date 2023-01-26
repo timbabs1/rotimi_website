@@ -10,7 +10,13 @@ function AboutItem({ item }) {
                     <img
                         src={item.image}
                         alt={`${item.name}`}
-                        className={item.name === 'SoulblackSheep' ? classes.blackSheepImage : classes.image}
+                        className={
+                            item.name === 'SoulblackSheep'
+                                ? classes.blackSheepImage
+                                : item.styleName === 'barnabas'
+                                ? classes.barnabasImage
+                                : classes.image
+                        }
                     />
                 </div>
                 <div className={classes.content}>

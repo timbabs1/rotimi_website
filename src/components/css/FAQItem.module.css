@@ -1,39 +1,42 @@
 .container {
-  margin-bottom: 44px;
+    margin-bottom: 44px;
 }
 
 .item {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  transition: all 1s ease-in;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 1s ease-in;
 }
 
 .question {
-  margin-left: 12px;
-  font-size: 24px;
-  font-weight: 600;
-  transition: all 1s ease-in;
+    margin-left: 12px;
+    font-size: 24px;
+    font-weight: 600;
+    /*transition: all 1s ease-in;*/
+}
+
+p {
+    margin-bottom: 0 !important;
 }
 
 .chevron {
-  font-size: 30px;
-  transition: all 1s ease-in;
+    font-size: 30px;
+    transition: all 1s ease-in;
 }
 
 .itemActive {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  margin-bottom: 12px;
-  transition: all 1s ease-in;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 12px;
 }
 
 .answer {
-  margin-left: 44px;
-  width: 46ch;
-  font-size: 18px;
-  line-height: 1.4;
-  cursor: default;
-  transition: all 1s ease-in;
+    margin-left: 44px;
+    width: 46ch;
+    font-size: 18px;
+    line-height: 1.4;
+    cursor: default;
+    transition: all 1s ease-in;
 }

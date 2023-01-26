@@ -1,6 +1,7 @@
 import classes from '../components/css/MintItem.module.css'
 import { useEffect, useState } from 'react'
 import MintCard from './MintCard'
+import { Col } from 'reactstrap'
 //import RotimiContract from '../ethereum/rtm'
 import {
     useContract,
@@ -171,6 +172,7 @@ function MintItem({ item }) {
     }
 
     return (
+        // <Col sm="12" md="12">
         <li className={classes.card}>
             <MintCard>
                 <div>
@@ -220,7 +222,8 @@ function MintItem({ item }) {
                             <button
                                 className={classes.mintButton}
                                 disabled={isPrepareError || contractWriteIsError || showMintErrorMessage || !write || isLoading}
-                                onClick={handleMintClick}>
+                                onClick={handleMintClick}
+                            >
                                 {isLoading ? 'Minting...' : 'Mint'}
                             </button>
                             {isSuccess && (
@@ -250,6 +253,7 @@ function MintItem({ item }) {
                 </div>
             </MintCard>
         </li>
+        // </Col>
     )
 }
 

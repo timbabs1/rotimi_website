@@ -1,26 +1,33 @@
 .section {
-  /* height: 300px; */
-  width: auto;
-  background-color: #fff;
-  padding: 76px 0px;
+    /* height: 300px; */
+    width: auto;
+    background-color: #fff;
+    padding: 76px 0px;
+    display: grid;
+    justify-items: center;
+}
+
+.section ol,
+ul {
+    padding-left: 0 !important;
 }
 
 .header {
-  text-align: center;
-  font-size: 48px;
-  margin-bottom: 64px;
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 64px;
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 362.66px);
-  grid-template-rows: repeat(2, auto);
-  gap: 24px;
-  row-gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 362.66px);
+    grid-template-rows: repeat(2, auto);
+    gap: 24px;
+    row-gap: 40px;
 }
 
 .text {
-  text-align: center;
-  font-weight: bold;
-  font-style: italic;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
 }
