@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     cursor: pointer;
-    transition: all 1s ease-in;
+    /*transition: all 1s ease-in;*/
 }
 
 .question {
@@ -22,7 +22,7 @@ p {
 
 .chevron {
     font-size: 30px;
-    transition: all 1s ease-in;
+    /*transition: all 1s ease-in;*/
 }
 
 .itemActive {
@@ -38,5 +38,18 @@ p {
     font-size: 18px;
     line-height: 1.4;
     cursor: default;
-    transition: all 1s ease-in;
+    /*transition: all 1s ease-in;*/
+    /*transition: visibility 1s ease-in;*/
+    transition: visibility 0.5s linear;
+}
+
+.answerDisplayNone {
+    margin-left: 44px;
+    width: 46ch;
+    font-size: 18px;
+    line-height: 1.4;
+    cursor: default;
+    /*transition: all 1s ease-in;*/
+    /*transition: visibility 1s ease-in;*/
+    transition: visibility 0.5s linear;
 }

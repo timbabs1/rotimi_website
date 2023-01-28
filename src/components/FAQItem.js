@@ -11,28 +11,43 @@ function FAQItem({ item, onExpandAll }) {
 
     return (
         <div onClick={onClickHandler} className={classes.container}>
-            {status === false ? (
-                <div className={classes.item}>
-                    <FiChevronRight className={classes.chevron} />
+            <>
+                <div className={status === false ? classes.item : classes.itemActive}>
+                    {status === false ? <FiChevronRight className={classes.chevron} /> : <FiChevronDown className={classes.chevron} />}
                     <p className={classes.question}>{item.question}</p>
                 </div>
-            ) : (
-                <div>
-                    <div className={classes.itemActive}>
-                        <FiChevronDown className={classes.chevron} />
-                        <p className={classes.question}>{item.question}</p>
-                    </div>
-                    {item.answer.length === 3 ? (
-                        <p className={classes.answer}>
-                            {item.answer.map(item => (
-                                <p className={classes.answer}>{item}</p>
-                            ))}
-                        </p>
-                    ) : (
-                        <p className={classes.answer}>{item.answer}</p>
-                    )}
-                </div>
-            )}
+                {item.answer.length === 3 ? (
+                    <p className={classes.answer}>
+                        {item.answer.map(item => (
+                            <p
+                                style={{
+                                    visibility: status === false ? 'hidden' : 'visible',
+                                    transition: 'opacity 0.5s linear',
+                                    opacity: status === false ? 0 : 1,
+                                    position: 'relative',
+                                    height: status === false ? 0 : '100%',
+                                }}
+                                className={classes.answer}
+                            >
+                                {item}
+                            </p>
+                        ))}
+                    </p>
+                ) : (
+                    <p
+                        style={{
+                            visibility: status === false ? 'hidden' : 'visible',
+                            transition: 'opacity 0.5s linear',
+                            opacity: status === false ? 0 : 1,
+                            position: 'relative',
+                            height: status === false ? 0 : '100%',
+                        }}
+                        className={classes.answer}
+                    >
+                        {item.answer}
+                    </p>
+                )}
+            </>
         </div>
     )
 }

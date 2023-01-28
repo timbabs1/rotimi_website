@@ -26,8 +26,13 @@ const burnout = [
         name: 'Promise Nwalozie',
         position: 'Director/Executive Producer',
         social: '@romihimself',
-        bio: [''],
+        bio: [
+            'Promise Agbawo Nwalozie has been in the music scene for a little over 10 years working in various roles including management and A&R. In 2016 he founded Drummr Africa; a media platform that promotes and documents emerging African music and culture. Working with over 300 artistes across the African continent and its diaspora. In 2022 Drummr Africa released a collaborative music project with artistes from all over Africa called “Yamen Yamen”',
+        ],
     },
+]
+
+const burnoutBarnabas = [
     {
         styleName: 'barnabas',
         image: '/images/Barnabas.jpg',
@@ -56,6 +61,13 @@ function AboutSection() {
                                 <AboutItem item={item} />
                             </Col>
                         ))}
+                    </Row>
+                    <Row>
+                        <Col sm="12" md="4" className="mt-3 mb-3"></Col>
+                        <Col sm="12" md="4" className="mt-3 mb-3">
+                            <AboutItem item={burnoutBarnabas[0]} />
+                        </Col>
+                        <Col sm="12" md="4" className="mt-3 mb-3"></Col>
                     </Row>
                 </ul>
             </div>
