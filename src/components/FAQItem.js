@@ -20,6 +20,7 @@ function FAQItem({ item, onExpandAll }) {
                     <p className={classes.answer}>
                         {item.answer.map(item => (
                             <p
+                                key={`${item.id}`}
                                 style={{
                                     visibility: status === false ? 'hidden' : 'visible',
                                     transition: 'opacity 0.5s linear',

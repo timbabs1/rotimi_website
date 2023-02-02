@@ -19,7 +19,9 @@ const burnout = [
         name: 'SoulblackSheep',
         position: '½ of Small Town Burnouts',
         social: '@soul_blacksheep',
-        bio: [''],
+        bio: [
+            'SoulBlackSheep broke into the music scene in 2018 with his debut album, ‘Ecstacy, Just Chill’. The soulful R&B tracks instantly captured the attention of music fans as he mixed English and Yoruba lyrics over minimalist lo-fi instrumentals',
+        ],
     },
     {
         image: '/images/promise.jpg',
