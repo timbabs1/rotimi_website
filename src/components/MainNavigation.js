@@ -29,7 +29,7 @@ function MainNavigation() {
                             <ul className={'mb-0 me-4'}>
                                 <li>
                                     <a
-                                        href="https://twitter.com/stburnouts"
+                                        href="https://twitter.com/theburnoutsfilm"
                                         aria-label="Small Town Burnouts Twitter page"
                                         target="_blank"
                                         rel="noreferrer"
