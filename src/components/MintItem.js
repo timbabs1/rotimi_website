@@ -69,6 +69,25 @@ function MintItem({ item }) {
         },
     })
 
+    // useEffect(() => {
+    //     if (contractWriteIsError) {
+    //         console.log('contractWriteError', contractWriteError)
+    //     }
+    //     if (isPrepareError) {
+    //         console.log('prepareError', prepareError)
+    //     }
+    //     if (showMintErrorMessage) {
+    //         console.log('mintErrorMessage', mintErrorMessage)
+    //     }
+    //     if (!write) {
+    //         console.log('write', write)
+    //     }
+    //     if (isLoading) {
+    //         console.log('isLoading', isLoading)
+    //     }
+    //     // console.log('disabled cases', isPrepareError || showMintErrorMessage || !write || isLoading)
+    // }, [])
+
     const { data, error: contractWriteError, isError: contractWriteIsError, write } = useContractWrite(config)
 
     const { isLoading, isSuccess } = useWaitForTransaction({
@@ -225,7 +244,7 @@ function MintItem({ item }) {
                             </div>
                             <button
                                 className={classes.mintButton}
-                                disabled={isPrepareError || contractWriteIsError || showMintErrorMessage || !write || isLoading}
+                                disabled={isPrepareError || contractWriteIsError || showMintErrorMessage || isLoading}
                                 onClick={handleMintClick}
                             >
                                 {isLoading ? 'Minting...' : 'Mint'}
