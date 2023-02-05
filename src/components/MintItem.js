@@ -105,7 +105,7 @@ function MintItem({ item }) {
     useEffect(() => {
         if (balance) {
             console.log('balance', balance.formatted)
-            setUserAccountBalance(parseInt(balance.formatted))
+            setUserAccountBalance(balance.formatted)
         }
         if (dataFromContract) {
             console.log('!!!! Total supply', parseInt(String(dataFromContract._hex)))
@@ -139,15 +139,16 @@ function MintItem({ item }) {
         event.preventDefault()
 
         await web3.eth.getAccounts(async (error, accounts) => {
-            if (error !== null) {
+            if (error) {
+                console.log('error', error)
                 setMintErrorMessage('An error occurred ' + error)
                 setShowMintErrorMessage(true)
-            }
-            // else if (accounts.length === 0) {
-            //     setMintErrorMessage('Please connect your wallet')
-            //     setShowMintErrorMessage(true)
-            // }
-            else {
+                return
+            } else if (!userAddress) {
+                setMintErrorMessage('Please connect your wallet by clicking the connect button at the top right corner')
+                setShowMintErrorMessage(true)
+                return
+            } else {
                 // for prod
                 // if (
                 //   ethereum.networkVersion === '4' ||
@@ -184,10 +185,6 @@ function MintItem({ item }) {
                 }
             }
         })
-        // const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' })
-        // console.log('accounts', accounts)
-        // const result = await RotimiContract.methods.mint(enteredQuantity).send({ from: accounts[0] })
-        // console.log('result', result)
     }
 
     return (
@@ -242,11 +239,7 @@ function MintItem({ item }) {
                                     +
                                 </button>
                             </div>
-                            <button
-                                className={classes.mintButton}
-                                disabled={isPrepareError || contractWriteIsError || showMintErrorMessage || isLoading}
-                                onClick={handleMintClick}
-                            >
+                            <button className={classes.mintButton} disabled={isLoading} onClick={handleMintClick}>
                                 {isLoading ? 'Minting...' : 'Mint'}
                             </button>
                             {isSuccess && (
