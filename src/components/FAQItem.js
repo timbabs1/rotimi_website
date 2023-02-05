@@ -21,7 +21,7 @@ function FAQItem({ item, onExpandAll }) {
                     <div className={classes.answer}>
                         {item.answer.map(item => (
                             <p
-                                key={`${uuidv4()}`}
+                                key={`paragraph ${item}`}
                                 style={{
                                     visibility: status === false ? 'hidden' : 'visible',
                                     transition: 'opacity 0.5s linear',
