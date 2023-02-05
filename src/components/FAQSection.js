@@ -40,7 +40,7 @@ function FAQSection() {
                 <ul className={classes.listContainer}>
                     <li className={classes.listItem}>
                         {FAQ.map(item => (
-                            <FAQItem item={item} />
+                            <FAQItem item={item} key={`item ${item.id}`} />
                         ))}
                     </li>
                 </ul>

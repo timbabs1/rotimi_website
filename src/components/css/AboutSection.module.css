@@ -11,6 +11,12 @@
     margin-bottom: 64px;
 }
 
+.image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
 .grid {
     /* display: grid; */
     /* grid-template-columns: repeat(3, 362.66px); */

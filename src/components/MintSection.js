@@ -1,6 +1,7 @@
 import classes from './css/MintSection.module.css'
 import MintItem from './MintItem'
 import { Row, Col } from 'reactstrap'
+import { v4 as uuidv4 } from 'uuid'
 
 const mint = [
     {
@@ -58,23 +59,13 @@ function MintSection() {
         <div className="container">
             <div className={classes.section + ' d-grid justi'}>
                 <h2 className={classes.header}>The Mint</h2>
-                {/* <ul className={classes.grid}> */}
                 <ul>
                     <Row>
                         {mint.map(item => (
-                            <Col sm="12" md="4">
+                            <Col key={`item ${item.tier} + ${uuidv4()}`} sm="12" md="4">
                                 <MintItem item={item} />
                             </Col>
                         ))}
-                        {/* <Col sm="12" md="4">
-                            <MintItem item={mint[0]} />
-                        </Col>
-                        <Col sm="12" md="4">
-                            <MintItem item={mint[1]} />
-                        </Col>
-                        <Col sm="12" md="4">
-                            <MintItem item={mint[2]} />
-                        </Col> */}
                     </Row>
                 </ul>
                 <p className={classes.text}>

@@ -1,8 +1,8 @@
 import classes from '../components/css/MintItem.module.css'
 import { useEffect, useState } from 'react'
 import MintCard from './MintCard'
-import { Col } from 'reactstrap'
-//import RotimiContract from '../ethereum/rtm'
+import { v4 as uuidv4 } from 'uuid'
+
 import {
     useContract,
     useContractRead,
@@ -185,13 +185,17 @@ function MintItem({ item }) {
                         <p className={classes.availability}>{item.availability} NFTs Created</p>
                         <ul className={classes.nft}>
                             {item.nft.map(item => (
-                                <li className={classes.nftItem}>{item}</li>
+                                <li key={uuidv4()} className={classes.nftItem}>
+                                    {item}
+                                </li>
                             ))}
                         </ul>
                         <p className={classes.subheading}>Utilities and Perks:</p>
                         <ul className={classes.list}>
                             {item.benefit.map(item => (
-                                <li className={classes.benefit}>{item}</li>
+                                <li key={uuidv4()} className={classes.benefit}>
+                                    {item}
+                                </li>
                             ))}
                         </ul>
                     </div>

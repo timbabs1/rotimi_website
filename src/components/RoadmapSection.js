@@ -1,6 +1,7 @@
 import classes from './css/RoadmapSection.module.css'
 import { BsArrowDown } from 'react-icons/bs'
 import RoadmapItem from './RoadmapItem'
+import { v4 as uuidv4 } from 'uuid'
 
 const roadmap = [
     {
@@ -42,11 +43,11 @@ function RoadmapSection() {
                 <ul>
                     {roadmap.map((item, index) =>
                         index === roadmap.length - 1 ? (
-                            <RoadmapItem item={item} />
+                            <RoadmapItem key={`${item.milestone} + ${item.date} - ${uuidv4()}`} item={item} />
                         ) : (
-                            <div>
-                                <RoadmapItem item={item} />
-                                <BsArrowDown className={classes.arrow} />
+                            <div key={`${item.milestone} + ${item.date} - ${uuidv4()}`}>
+                                <RoadmapItem key={`${item.milestone} + ${item.date} - ${uuidv4()}`} item={item} />
+                                <BsArrowDown key={`${item.milestone} + ${item.date} - ${uuidv4()}`} className={classes.arrow} />
                             </div>
                         ),
                     )}
