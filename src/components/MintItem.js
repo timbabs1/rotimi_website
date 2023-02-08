@@ -246,10 +246,12 @@ function MintItem({ item }) {
                                 <div>
                                     Successfully minted your NFT!
                                     <div>
-                                        {/*<a href={`https://etherscan.io/tx/${data?.hash}`}>Etherscan</a>*/}
-                                        <a href={`https://goerli.etherscan.io/tx/${data?.hash}`} target="_blank">
+                                        <a href={`https://etherscan.io/tx/${data?.hash}`} target="_blank">
                                             Etherscan
                                         </a>
+                                        {/* <a href={`https://goerli.etherscan.io/tx/${data?.hash}`} target="_blank">
+                                            Etherscan
+                                        </a> */}
                                     </div>
                                 </div>
                             )}
