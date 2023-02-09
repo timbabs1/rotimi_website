@@ -48,7 +48,7 @@ function MintItem({ item }) {
         isError,
         isLoading: contractReadIsLoading,
     } = useContractRead({
-        address: process.env.REACT_APP_TEST_NET_ADDRESS,
+        address: process.env.REACT_APP_PROD_CONTRACT_ADDRESS,
         abi: compiledRotimi,
         functionName: 'totalSupply',
     })
@@ -58,7 +58,7 @@ function MintItem({ item }) {
         error: prepareError,
         isError: isPrepareError,
     } = usePrepareContractWrite({
-        address: process.env.REACT_APP_TEST_NET_ADDRESS,
+        address: process.env.REACT_APP_PROD_CONTRACT_ADDRESS,
         abi: compiledRotimi,
         functionName: 'fundRotimi',
         args: [item.tier, enteredQuantity],
